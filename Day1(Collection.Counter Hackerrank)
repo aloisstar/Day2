@@ -1,0 +1,20 @@
+
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+import sys
+import os
+from collections import Counter
+X = int(input())
+ssg = Counter(map(int, input().split()))
+N = int(input())
+income = 0
+
+for i in range(N):
+    sspr =  input().split()
+
+    ss = int(sspr[0])
+    pr = int(sspr[1])
+    if(ssg[ss]):
+        income += pr
+        ssg[ss] -= 1
+    
+print(income)
